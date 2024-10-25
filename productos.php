@@ -30,13 +30,13 @@ include_once('tienda.php');   // Incluye el archivo tienda.php dentro de este
 
     //Se ejecuta la consulta
     $sentencia = $mysqli->multi_query($consulta);
-
+    
     // Aqui queda el resultado
     $resultado = $mysqli->store_result();
 
     echo "<h5>Productos del fabricante</h5>";
     echo '<p>La consulta devolvió ' . $resultado->num_rows . ' registros.</p>';
-
+    
     $i = 0;
     echo '<table class="table table-sm table-striped table-bordered">';
     while ($fila = $resultado->fetch_assoc()) :    // Recorremos para ir fila x fila
